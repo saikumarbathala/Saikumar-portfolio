@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sai Kumar Bathala | AWS & DevOps Engineer Portfolio</title>
+    <meta name="description" content="Professional portfolio of Sai Kumar Bathala - Aspiring AWS & DevOps Engineer specializing in AWS, Docker, Kubernetes, Jenkins, and Terraform.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Glow Elements -->
+    <div class="glow-bg glow-purple"></div>
+    <div class="glow-bg glow-blue"></div>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-server"></i></span>
+                <span class="logo-text">sai.devops</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#education">Timeline</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="menu-toggle" id="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav" id="mobile-nav-drawer">
+        <div class="mobile-nav-header">
+            <span class="logo-text">sai.devops</span>
+            <span class="close-btn" id="mobile-close-btn"><i class="fa-solid fa-xmark"></i></span>
+        </div>
+        <a href="#home" class="mobile-link">Home</a>
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#skills" class="mobile-link">Skills</a>
+        <a href="#projects" class="mobile-link">Projects</a>
+        <a href="#education" class="mobile-link">Timeline</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+
+    <main>
+        <!-- Hero Section with Interactive Terminal -->
+        <section id="home" class="hero-section">
+            <div class="hero-container">
+                <div class="hero-info">
+                    <span class="badge"><i class="fa-solid fa-circle-nodes"></i> Ready to Deploy</span>
+                    <h1>Hi, I'm <span class="highlight">Sai Kumar Bathala</span></h1>
+                    <h2>I automate <span class="typing-text" id="typewriter"></span></h2>
+                    <p class="hero-desc">
+                        Aspiring AWS & DevOps Engineer passionate about cloud-native architectures, designing scalable infrastructures, automating CI/CD pipelines, and writing infrastructure as code.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-cubes"></i> View Projects</a>
+                        <a href="#contact" class="btn btn-secondary"><i class="fa-solid fa-envelope"></i> Contact Me</a>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://linkedin.com/in/saikumar-bathala" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/saikumarbathala" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="mailto:saikumarbathala2@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="tel:+919390194950" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+                    </div>
+                </div>
+
+                <div class="hero-terminal">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <div class="terminal-title">sai-kumar-devops ~ CLI</div>
+                            <div class="terminal-actions">
+                                <i class="fa-solid fa-window-minimize"></i>
+                                <i class="fa-solid fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="terminal-body" id="terminal-output">
+                            <div class="terminal-line text-comment"># Welcome to Sai Kumar's Interactive DevOps Terminal!</div>
+                            <div class="terminal-line text-comment"># Type 'help' to see list of available commands.</div>
+                            <div class="terminal-line text-info"><i class="fa-solid fa-terminal prompt-arrow"></i> systemctl status saikumar-portfolio</div>
+                            <div class="terminal-line text-success">● saikumar-portfolio.service - Portfolio CLI Application</div>
+                            <div class="terminal-line text-success">&nbsp;&nbsp;&nbsp;Active: active (running) since Thu 2026-06-18 09:30:00 UTC</div>
+                            <div class="terminal-line text-success">&nbsp;&nbsp;&nbsp;Main PID: 2026 (node)</div>
+                            <div class="terminal-line text-success">&nbsp;&nbsp;&nbsp;Tasks: 1 (limit: 4915)</div>
+                            <div class="terminal-line text-success">&nbsp;&nbsp;&nbsp;Memory: 15.4M</div>
+                            <div class="terminal-line text-success">&nbsp;&nbsp;&nbsp;CGroup: /system.slice/saikumar-portfolio.service</div>
+                            <br>
+                        </div>
+                        <div class="terminal-input-line">
+                            <span class="prompt-user">guest@sai-devops:~$</span>
+                            <input type="text" id="terminal-input" placeholder="type 'help'..." autofocus autocomplete="off" spellcheck="false">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="section-header">
+                <span class="sub-title">Who I Am</span>
+                <h2>Professional Summary</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="about-container">
+                <div class="about-text">
+                    <p>
+                        I am an <strong>Aspiring AWS & DevOps Engineer</strong> with a strong foundation in designing, configuring, and deploying scalable, highly available cloud infrastructures. My passion lies in bridging the gap between development and operations through automation, building robust continuous integration and continuous deployment (CI/CD) pipelines, and architecting modern microservices landscapes.
+                    </p>
+                    <p>
+                        I love solving complex infrastructure challenges, maintaining high uptime, and implementing automated testing and deployment strategies. I thrive in environments that challenge me to continuously learn and apply cutting-edge DevOps methodologies.
+                    </p>
+                    <div class="quick-facts">
+                        <div class="fact-card">
+                            <span class="fact-icon"><i class="fa-solid fa-cloud"></i></span>
+                            <h3>Cloud Specialist</h3>
+                            <p>Deep focus on Amazon Web Services (AWS) deployment and administration.</p>
+                        </div>
+                        <div class="fact-card">
+                            <span class="fact-icon"><i class="fa-solid fa-code"></i></span>
+                            <h3>Automation Fanatic</h3>
+                            <p>Building automated pipelines (Jenkins) and infrastructure-as-code (Terraform).</p>
+                        </div>
+                        <div class="fact-card">
+                            <span class="fact-icon"><i class="fa-solid fa-cubes"></i></span>
+                            <h3>Container Advocate</h3>
+                            <p>Containerizing applications and orchestrating them via Docker and Kubernetes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="section-header">
+                <span class="sub-title">My Toolbox</span>
+                <h2>Technical Skills</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="skills-container">
+                <!-- Skill Category: Cloud -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <i class="fa-solid fa-cloud-sun icon-cloud"></i>
+                        <h3>Cloud Computing</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li>
+                            <div class="skill-info"><span>AWS (EC2, VPC, S3)</span><span>90%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+                        </li>
+                        <li>
+                            <div class="skill-info"><span>AWS IAM & Security</span><span>85%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+                        </li>
+                        <li>
+                            <div class="skill-info"><span>ALB & Auto Scaling</span><span>88%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 88%;"></div></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Skill Category: Containers & Orchestration -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <i class="fa-brands fa-docker icon-docker"></i>
+                        <h3>Containers & Orchestration</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li>
+                            <div class="skill-info"><span>Docker (Containerization)</span><span>85%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+                        </li>
+                        <li>
+                            <div class="skill-info"><span>Kubernetes (Orchestration)</span><span>80%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+                        </li>
+                        <li>
+                            <div class="skill-info"><span>Container Security</span><span>75%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Skill Category: CI/CD & IaC -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <i class="fa-solid fa-gears icon-ci"></i>
+                        <h3>CI/CD & IaC</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li>
+                            <div class="skill-info"><span>Terraform (IaC)</span><span>82%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 82%;"></div></div>
+                        </li>
+                        <li>
+                            <div class="skill-info"><span>Jenkins (Pipelines)</span><span>80%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+                        </li>
+                        <li>
+                            <div class="skill-info"><span>Git & GitHub (Version Control)</span><span>90%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Skill Category: Linux & Networking -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <i class="fa-solid fa-network-wired icon-net"></i>
+                        <h3>OS, Web Servers & Networking</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li>
+                            <div class="skill-info"><span>Linux Administration (Ubuntu)</span><span>88%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 88%;"></div></div>
+                        </li>
+                        <li>
+                            <div class="skill-info"><span>NGINX & Apache Tomcat</span><span>80%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+                        </li>
+                        <li>
+                            <div class="skill-info"><span>Networking (Subnets, VPC, Route Tables)</span><span>85%</span></div>
+                            <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="section-header">
+                <span class="sub-title">My Work</span>
+                <h2>DevOps & Cloud Projects</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-badge">AWS Cloud</div>
+                    <div class="project-content">
+                        <h3>AWS 3-Tier Architecture Deployment</h3>
+                        <p>Designed and deployed a highly secure, reliable, and scalable 3-tier architecture containing Web, App, and Database layers within a custom-configured Virtual Private Cloud (VPC).</p>
+                        <ul class="project-bullets">
+                            <li>Created secure public and private subnets across multiple availability zones.</li>
+                            <li>Configured Route Tables, Internet Gateways, NAT Gateways, and strict Security Groups.</li>
+                            <li>Deployed and ran application code on optimized EC2 Linux instances.</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span>AWS EC2</span>
+                            <span>AWS VPC</span>
+                            <span>Security Groups</span>
+                            <span>Linux</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-badge">Containers</div>
+                    <div class="project-content">
+                        <h3>Dockerized Application Deployment</h3>
+                        <p>Streamlined software delivery by containerizing monolithic and microservices applications to ensure consistency and portability across development, testing, and production environments.</p>
+                        <ul class="project-bullets">
+                            <li>Wrote clean, optimized multi-stage Dockerfiles.</li>
+                            <li>Managed local and registry images, reducing image sizes.</li>
+                            <li>Exposed containerized services securely using port mapping and Docker networks.</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span>Docker</span>
+                            <span>Docker Hub</span>
+                            <span>Port Mapping</span>
+                            <span>Microservices</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-badge">IaC</div>
+                    <div class="project-content">
+                        <h3>Infrastructure Automation using Terraform</h3>
+                        <p>Developed Infrastructure as Code (IaC) solutions to automate the provisioning and versioning of complex cloud architectures, reducing deployment errors and team effort.</p>
+                        <ul class="project-bullets">
+                            <li>Wrote modular and reusable Terraform configurations for AWS VPC and EC2 setups.</li>
+                            <li>Managed state files safely using backend storage configurations.</li>
+                            <li>Effectively executed planning, application, and teardown cycles.</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span>Terraform</span>
+                            <span>IaC</span>
+                            <span>AWS Provider</span>
+                            <span>State Management</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-badge">Orchestration</div>
+                    <div class="project-content">
+                        <h3>Kubernetes Cluster Deployment</h3>
+                        <p>Deployed containerized microservices into a Kubernetes cluster, configuring resource constraints, network connectivity, and external exposure to ensure high availability.</p>
+                        <ul class="project-bullets">
+                            <li>Created declarative Pods, Deployments, and Services manifests.</li>
+                            <li>Utilized kubectl commands for monitoring cluster health and debugging workloads.</li>
+                            <li>Configured replica counts and Horizontal Pod Autoscalers to handle load variations.</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span>Kubernetes</span>
+                            <span>kubectl</span>
+                            <span>ReplicaSets</span>
+                            <span>Load Balancing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section (Education & Certifications) -->
+        <section id="education" class="timeline-section">
+            <div class="section-header">
+                <span class="sub-title">History & Qualifications</span>
+                <h2>Education & Certifications</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="timeline-container">
+                <div class="timeline">
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2023 - 2026</div>
+                        <div class="timeline-content">
+                            <h3>B.Tech in Computer Science (AI)</h3>
+                            <h4 class="timeline-institution">Siddharth Institute of Engineering and Technology</h4>
+                            <p class="timeline-grade"><strong>CGPA:</strong> 7.3</p>
+                            <p>Focused on core computer science foundations, algorithm design, cloud integration, and artificial intelligence architectures.</p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2019 - 2023</div>
+                        <div class="timeline-content">
+                            <h3>Diploma in Electronics & Communication</h3>
+                            <h4 class="timeline-institution">C.R Polytechnic College</h4>
+                            <p class="timeline-grade"><strong>Percentage:</strong> 69.9%</p>
+                            <p>Studied computer hardware fundamentals, digital design, and basic networking principles.</p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2018 - 2019</div>
+                        <div class="timeline-content">
+                            <h3>SSC (Secondary School Certificate)</h3>
+                            <h4 class="timeline-institution">ZP High School</h4>
+                            <p class="timeline-grade"><strong>CGPA:</strong> 8.3</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certifications-box">
+                    <h3><i class="fa-solid fa-award"></i> Certifications</h3>
+                    <div class="cert-cards">
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <div class="cert-info-box">
+                                <h4>Machine Learning for Engineering and Science Applications</h4>
+                                <p>Explored computational methods, regressions, classification techniques, and engineering algorithms.</p>
+                            </div>
+                        </div>
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class="fa-solid fa-robot"></i></div>
+                            <div class="cert-info-box">
+                                <h4>Chatbot Development using Artificial Intelligence</h4>
+                                <p>Learned natural language processing techniques to build automated, responsive conversational agents.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="section-header">
+                <span class="sub-title">Let's Connect</span>
+                <h2>Get In Touch</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info-panel">
+                    <h3>Contact Information</h3>
+                    <p>Feel free to reach out for internship opportunities, project collaborations, or just a chat about AWS & DevOps automation!</p>
+                    
+                    <div class="contact-detail-items">
+                        <div class="contact-detail-item">
+                            <span class="icon-holder"><i class="fa-solid fa-phone"></i></span>
+                            <div>
+                                <h4>Phone</h4>
+                                <p><a href="tel:+919390194950">+91 9390 194 950</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-detail-item">
+                            <span class="icon-holder"><i class="fa-solid fa-envelope"></i></span>
+                            <div>
+                                <h4>Email</h4>
+                                <p><a href="mailto:saikumarbathala2@gmail.com">saikumarbathala2@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-detail-item">
+                            <span class="icon-holder"><i class="fa-solid fa-location-dot"></i></span>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Andhra Pradesh, India</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links-title">Follow Me</div>
+                    <div class="social-icons">
+                        <a href="https://linkedin.com/in/saikumar-bathala" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/saikumarbathala" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-form-panel">
+                    <form id="contact-form" onsubmit="event.preventDefault(); alert('Message sent! (Note: This is a mockup form. In a deployed site, you can link this to AWS Lambda & Simple Email Service (SES) to receive real messages!)'); this.reset();">
+                        <div class="form-group">
+                            <label for="form-name">Name</label>
+                            <input type="text" id="form-name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-email">Email</label>
+                            <input type="email" id="form-email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-subject">Subject</label>
+                            <input type="text" id="form-subject" placeholder="Collaboration / Job Opportunity" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-message">Message</label>
+                            <textarea id="form-message" rows="5" placeholder="Write your message here..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary form-submit-btn"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 Sai Kumar Bathala. Built with Passion & Automation.</p>
+            <p class="footer-hint">Tip: Scroll up and use the Interactive Terminal (type <code>help</code>) for a unique CLI experience!</p>
+        </div>
+    </footer>
+
+    <!-- Script file -->
+    <script src="script.js"></script>
+</body>
+</html>
