@@ -30,7 +30,7 @@ pipeline {
             steps {
                 echo "Building Docker image: ${DOCKER_HUB_USER}/${IMAGE_NAME}:${IMAGE_TAG}..."
                 script {
-                    dockerImage = docker.build("${DOCKER_HUB_USER}/${IMAGE_NAME}:${IMAGE_TAG}")
+                    dockerImage = docker.build("${Saikumarbathala}/${Portfolio}:${latest}")
                 }
             }
         }
@@ -55,7 +55,7 @@ pipeline {
                 script {
                     sh "docker stop ${IMAGE_NAME} || true"
                     sh "docker rm ${IMAGE_NAME} || true"
-                    sh "docker run -d -p 8080:80 --name ${IMAGE_NAME} ${DOCKER_HUB_USER}/${IMAGE_NAME}:${IMAGE_TAG}"
+                    sh "docker run -d -p 8080:80 --name ${PORTFOLIO} ${Saikumarbathala}/${latest}:}"
                 }
                 echo 'Deployment finished successfully!'
             }
