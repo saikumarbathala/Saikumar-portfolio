@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        // Replace with your Docker Hub registry details
+        // Replace with your Docker Hub username and repository name
         DOCKER_HUB_USER = 'saikumarbathala'
         IMAGE_NAME      = 'devops-portfolio'
         IMAGE_TAG       = "${BUILD_NUMBER}"
@@ -21,28 +21,25 @@ pipeline {
         stage('Code Analysis') {
             steps {
                 echo 'Performing basic validation of HTML, CSS, and JS configurations...'
-                // A DevOps developer can add shell linting commands here, for example:
-                // sh 'tidy -e index.html' or similar checkers if configured.
             }
         }
 
         stage('Build Docker Image') {
             steps {
                 echo "Building Docker image: ${DOCKER_HUB_USER}/${IMAGE_NAME}:${IMAGE_TAG}..."
-                script {
-                    dockerImage = docker.build("${Saikumarbathala}/${Portfolio}:${latest}")
-                }
+                // Standard shell execution to build image (independent of Jenkins Docker Pipeline plugin)
+                sh "docker build -t ${DOCKER_HUB_USER}/${IMAGE_NAME}:${IMAGE_TAG} -t ${DOCKER_HUB_USER}/${IMAGE_NAME}:latest ."
             }
         }
 
         stage('Push to Docker Hub') {
             steps {
                 echo 'Logging in to Docker Hub and pushing image...'
-                script {
-                    docker.withRegistry('https://index.docker.io/v1/', DOCKER_HUB_CREDS) {
-                        dockerImage.push()
-                        dockerImage.push("latest")
-                    }
+                // Standard Jenkins withCredentials block to securely login and push
+                withCredentials([usernamePassword(credentialsId: "${DOCKER_HUB_CREDS}", passwordVariable: 'DOCKER_HUB_PASSWORD', usernameVariable: 'DOCKER_HUB_USERNAME')]) {
+                    sh "echo \$DOCKER_HUB_PASSWORD | docker login -u \$DOCKER_HUB_USERNAME --password-stdin"
+                    sh "docker push ${DOCKER_HUB_USER}/${IMAGE_NAME}:${IMAGE_TAG}"
+                    sh "docker push ${DOCKER_HUB_USER}/${IMAGE_NAME}:latest"
                 }
             }
         }
@@ -50,13 +47,9 @@ pipeline {
         stage('Deploy Application') {
             steps {
                 echo 'Deploying application container locally on server...'
-                // In a production setup, this step might trigger Ansible, AWS CLI, or kubectl.
-                // Here, we run the container on port 8080.
-                script {
-                    sh "docker stop ${IMAGE_NAME} || true"
-                    sh "docker rm ${IMAGE_NAME} || true"
-                    sh "docker run -d -p 8080:80 --name ${PORTFOLIO} ${Saikumarbathala}/${latest}:}"
-                }
+                sh "docker stop ${IMAGE_NAME} || true"
+                sh "docker rm ${IMAGE_NAME} || true"
+                sh "docker run -d -p 8080:80 --name ${IMAGE_NAME} ${DOCKER_HUB_USER}/${IMAGE_NAME}:${IMAGE_TAG}"
                 echo 'Deployment finished successfully!'
             }
         }
