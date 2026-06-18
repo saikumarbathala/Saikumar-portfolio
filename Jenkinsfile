@@ -49,8 +49,9 @@ pipeline {
                 echo 'Deploying application container locally on server...'
                 sh "docker stop ${IMAGE_NAME} || true"
                 sh "docker rm ${IMAGE_NAME} || true"
-                sh "docker run -d -p 8080:80 --name ${IMAGE_NAME} ${DOCKER_HUB_USER}/${IMAGE_NAME}:${IMAGE_TAG}"
-                echo 'Deployment finished successfully!'
+                // Map to Port 8081 instead of 8080 (since Jenkins is using 8080)
+                sh "docker run -d -p 8081:80 --name ${IMAGE_NAME} ${DOCKER_HUB_USER}/${IMAGE_NAME}:${IMAGE_TAG}"
+                echo 'Deployment finished successfully! Access your portfolio at http://<server-ip>:8081'
             }
         }
     }
